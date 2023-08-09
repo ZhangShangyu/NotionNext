@@ -20,6 +20,8 @@ const LatestPostsGroup = ({ latestPosts, siteInfo }) => {
     return <></>
   }
 
+  const headerImage = post?.pageCoverThumbnail ? post.pageCoverThumbnail : siteInfo?.pageCoverThumbnail
+
   return <>
         <div className=" mb-2 px-1 flex flex-nowrap justify-between">
             <div>
@@ -38,6 +40,9 @@ const LatestPostsGroup = ({ latestPosts, siteInfo }) => {
                     passHref
                     className={'my-3 flex'}>
 
+                    <div className="w-20 h-14 overflow-hidden relative">
+                        <LazyImage src={`${headerImage}`} className='object-cover w-full h-full'/>
+                    </div>
                     <div
                         className={
                             (selected ? ' text-indigo-400 ' : 'dark:text-gray-400 ') +
