@@ -20,7 +20,6 @@ const LatestPostsGroup = ({ latestPosts, siteInfo }) => {
     return <></>
   }
 
-  const headerImage = post?.pageCoverThumbnail ? post.pageCoverThumbnail : siteInfo?.pageCover
 
   return <>
         <div className=" mb-2 px-1 flex flex-nowrap justify-between">
@@ -31,6 +30,8 @@ const LatestPostsGroup = ({ latestPosts, siteInfo }) => {
         </div>
         {latestPosts.map(post => {
           const selected = currentPath === `${BLOG.SUB_PATH}/${post.slug}`
+          
+          const headerImage = post?.pageCoverThumbnail ? post.pageCoverThumbnail : siteInfo?.pageCoverThumbnail
 
           return (
             (<Link
