@@ -31,7 +31,7 @@ const LatestPostsGroup = ({ latestPosts, siteInfo }) => {
         {latestPosts.map(post => {
           const selected = currentPath === `${BLOG.SUB_PATH}/${post.slug}`
           
-          const headerImage = post?.pageCoverThumbnail ? post.pageCoverThumbnail : siteInfo?.pageCoverThumbnail
+          const headerImage = post?.pageCoverThumbnail ? post.pageCoverThumbnail : siteInfo?.pageCover
 
           return (
             (<Link
