@@ -20,7 +20,7 @@ const LatestPostsGroup = ({ latestPosts, siteInfo }) => {
     return <></>
   }
 
-  const headerImage = post?.pageCoverThumbnail ? post.pageCoverThumbnail : siteInfo?.pageCoverThumbnail
+  const headerImage = post?.pageCoverThumbnail ? post.pageCoverThumbnail : siteInfo?.pageCover
 
   return <>
         <div className=" mb-2 px-1 flex flex-nowrap justify-between">
