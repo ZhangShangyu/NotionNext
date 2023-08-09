@@ -30,8 +30,6 @@ const LatestPostsGroup = ({ latestPosts, siteInfo }) => {
         {latestPosts.map(post => {
           const selected = currentPath === `${BLOG.SUB_PATH}/${post.slug}`
 
-          const headerImage = post?.pageCoverThumbnail ? post.pageCoverThumbnail : siteInfo?.pageCover
-
           return (
             (<Link
                     key={post.id}
@@ -40,9 +38,6 @@ const LatestPostsGroup = ({ latestPosts, siteInfo }) => {
                     passHref
                     className={'my-3 flex'}>
 
-                    <div className="w-20 h-14 overflow-hidden relative">
-                        <LazyImage src={`${headerImage}`} className='object-cover w-full h-full'/>
-                    </div>
                     <div
                         className={
                             (selected ? ' text-indigo-400 ' : 'dark:text-gray-400 ') +
